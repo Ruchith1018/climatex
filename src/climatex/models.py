@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pydantic import BaseModel, Field
 
 class CurrentWeather(BaseModel):
@@ -12,9 +12,14 @@ class CurrentWeather(BaseModel):
 
 class HourlyData(BaseModel):
     time: List[str]
-    temperature_2m: List[float]
+    temperature_2m: Optional[List[float]] = None
     relative_humidity_2m: Optional[List[float]] = None
     wind_speed_10m: Optional[List[float]] = None
+    # Support for Air Quality variables
+    pm2_5: Optional[List[float]] = None
+    pm10: Optional[List[float]] = None
+    nitrogen_dioxide: Optional[List[float]] = None
+    ozone: Optional[List[float]] = None
 
 class DailyData(BaseModel):
     time: List[str]
@@ -29,11 +34,21 @@ class WeatherResponse(BaseModel):
     generationtime_ms: float
     utc_offset_seconds: int
     timezone: str
-    timezone_abbreviation: str
+    timezone_abbreviation: Optional[str] = None
     elevation: float
     current: Optional[CurrentWeather] = None
     hourly: Optional[HourlyData] = None
     daily: Optional[DailyData] = None
+
+class AirQualityResponse(BaseModel):
+    latitude: float
+    longitude: float
+    generationtime_ms: float
+    utc_offset_seconds: int
+    timezone: str
+    timezone_abbreviation: Optional[str] = None
+    elevation: Optional[float] = None
+    hourly: HourlyData
 
 class Location(BaseModel):
     id: int
