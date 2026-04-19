@@ -66,6 +66,6 @@ async def main():
 asyncio.run(main())
 ```
 
-## License
+## CI/CD Security
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project uses **Trusted Publishing** (OIDC) for secure deployments to PyPI. This removes the need for permanent API tokens in GitHub Actions, using short-lived, automated handshakes instead. Automated provenance attestations are also generated for every release.
