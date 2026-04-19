@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "climatex"
+version = "0.1.0"
+description = "A simple and powerful Python wrapper for the Open-Meteo API."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "RUCHITH", email = "ruchith.balam1@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/RUCHITH/climatex"
+Issues = "https://github.com/RUCHITH/climatex/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/climatex"]
