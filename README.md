@@ -4,11 +4,11 @@ ClimateX is a simple, high-performance Python wrapper for the [Open-Meteo API](h
 
 ## Features
 
-- ⚡ **Sync & Async Support**: Built on top of `httpx`.
-- 🔍 **Geocoding API**: Search for coordinates by city name.
-- 🌡️ **Current Weather**: Get real-time weather details.
-- 📅 **7-Day Forecast**: Hourly and daily weather variables.
-- 🛡️ **Type Safety**: Fully typed with Pydantic models.
+- **Sync & Async Support**: Built on top of `httpx`.
+- **Geocoding API**: Search for coordinates by city name.
+- **Current Weather**: Get real-time weather details.
+- **7-Day Forecast**: Hourly and daily weather variables.
+- **Type Safety**: Fully typed with Pydantic models.
 
 ## Local Development Setup
 
