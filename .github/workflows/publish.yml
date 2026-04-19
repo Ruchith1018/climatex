@@ -28,7 +28,7 @@ jobs:
       run: twine check dist/*
 
     - name: Publish to PyPI
-      uses: pypa/github-action-pypi-publish@release/v1
+      uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
