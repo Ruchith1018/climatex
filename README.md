@@ -1,4 +1,4 @@
-# ClimateX 🌦️
+# ClimateX 
 
 ClimateX is a simple, high-performance Python wrapper for the [Open-Meteo API](https://open-meteo.com/). It supports both synchronous and asynchronous requests, making it ideal for everything from data science scripts to real-time bots and web applications.
 
